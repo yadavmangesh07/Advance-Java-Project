@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         id="WebApp_ID"
+         version="5.0">
+  
   <display-name>usm</display-name>
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.jsp</welcome-file>
@@ -9,6 +15,8 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  
+  <!-- Servlet configuration for AddTeacherServlet -->
   <servlet>
     <description></description>
     <display-name>AddTeacherServlet</display-name>
@@ -19,6 +27,8 @@
     <servlet-name>AddTeacherServlet</servlet-name>
     <url-pattern>/AddTeacherServlet</url-pattern>
   </servlet-mapping>
+  
+  <!-- Servlet configuration for AddStudentServlet -->
   <servlet>
     <description></description>
     <display-name>AddStudentServlet</display-name>
@@ -29,4 +39,18 @@
     <servlet-name>AddStudentServlet</servlet-name>
     <url-pattern>/AddStudentServlet</url-pattern>
   </servlet-mapping>
+  
+  <!-- Servlet configuration for FacultyLeaveServlet with multi-part support -->
+  <servlet>
+    <description></description>
+    <display-name>FacultyLeaveServlet</display-name>
+    <servlet-name>FacultyLeaveServlet</servlet-name>
+    <servlet-class>FacultyLeaveServlet</servlet-class>
+    
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FacultyLeaveServlet</servlet-name>
+    <url-pattern>/FacultyLeaveServlet</url-pattern>
+  </servlet-mapping>
+
 </web-app>
