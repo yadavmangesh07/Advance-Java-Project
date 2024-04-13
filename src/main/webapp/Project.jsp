@@ -6,6 +6,35 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+    body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Hide scrollbar */
+        }
+        .navbar {
+            width: 100%;
+            height: 50px; /* Adjust as per your navbar height */
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999; /* Ensure navbar is on top */
+        }
+        .iframe-container {
+            position: relative;
+            height: calc(100vh - 50px); /* Adjust for navbar height */
+            overflow: hidden; /* Hide any overflow */
+            padding-top: 50px; /* Adjust to match navbar height */
+        }
+        .full-screen-iframe {
+            width: 100%;
+            height: calc(100% + 50px); /* Adjust for padding */
+            position: absolute;
+            top: -78px; /* Adjust for padding */
+            left: 0;
+            border: none;
+        }
         .navbar-brand {
             margin-right: auto; /* Moves NIET Cloud to the left corner */
         }
@@ -23,13 +52,15 @@
     height: 100%; /* 100% of parent element's height (full-screen div) */
     width: 100%; /* 100% of parent element's width (full-screen div) */
 }
+
+
         
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mr-5 h-10">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light  mr-5 h-10 border">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand text-dark" href="Project.jsp">
            <!--  <img src="Assets/nietlogo.png" height="135px" width="100px" /> -->
            Niet Cloud
 
@@ -41,7 +72,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="newInfoDropdown" role="button"
+                        <a class="nav-link dropdown-toggle text-black" href="#" id="newInfoDropdown" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
                             New Information
                         </a>
@@ -51,7 +82,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="viewDetailsDropdown" role="button"
+                        <a class="nav-link dropdown-toggle text-black" href="#" id="viewDetailsDropdown" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
                             View Details
                         </a>
@@ -61,7 +92,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="leaveDropdown" role="button"
+                        <a class="nav-link dropdown-toggle text-black" href="#" id="leaveDropdown" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
                             Leave
                         </a>
@@ -71,7 +102,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="leaveDetailsDropdown" role="button"
+                        <a class="nav-link dropdown-toggle text-black" href="#" id="leaveDetailsDropdown" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
                             Leave Details
                         </a>
@@ -81,17 +112,17 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="examDropdown" role="button"
+                        <a class="nav-link dropdown-toggle text-black" href="#" id="examDropdown" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
                             Exam
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="examDropdown">
-                            <li><a class="dropdown-item" href="#">Examination Results</a></li>
-                            <li><a class="dropdown-item" href="#">Download Admit Card</a></li>
+                            <li><a class="dropdown-item" href="https://www4.tcsion.com/dotcom/TCSSMB/Login/login.html">Examination Results</a></li>
+                            <li><a class="dropdown-item" href="https://www4.tcsion.com/dotcom/TCSSMB/Login/login.html">Download Admit Card</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="updateDetailsDropdown" role="button"
+                        <a class="nav-link dropdown-toggle text-black" href="#" id="updateDetailsDropdown" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
                             Update Details
                         </a>
@@ -101,20 +132,20 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="feeDropdown" role="button"
+                        <a class="nav-link dropdown-toggle text-black" href="#" id="feeDropdown" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
                             Fee
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="feeDropdown">
-                            <li><a class="dropdown-item" href="#">Fee Structure</a></li>
-                            <li><a class="dropdown-item" href="#">Pay Fee</a></li>
+                            <li><a class="dropdown-item" href="https://www.niet.co.in/all-fee-structure.php">Fee Structure</a></li>
+                            <li><a class="dropdown-item" href="https://feepal.org/index.php?/institute/noida-institute-of-engineering-and-technology">Pay Fee</a></li>
                         </ul>
                     </li>
                     
                 </ul>
             </div>
             
-                        <a class="nav-link text-white button" href="Login.jsp"><button class="btn btn-light">Log Out</button></a>
+                        <a class="nav-link text-white button" href="Login.jsp"><button class="btn btn-dark btn-sm">Log Out</button></a>
                     
         </div>
     </nav>

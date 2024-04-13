@@ -8,6 +8,9 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /* Add your CSS styles here */
+        h1 {
+            color: #007bff;
+        }
     </style>
    <script>
     function validateForm() {

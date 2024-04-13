@@ -14,37 +14,51 @@
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
 }
-
 body {
     background-image: url('Assets/nietlogo.jpg');
     background-size: cover; /* Cover the entire background */
     background-position: center; /* Center the background */
     background-repeat: no-repeat; /* Prevent background from repeating */
 }
+th,td{
+text-align: center;
+
+
+}
+td{
+ border-right: 1px solid black;
+}
+th{
+ border-right: 1px solid white;
+}
+
+
+
+
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center mb-4">Search Student Details</h1>
+        <h1 class="text-center mb-4 text-white">Search Student Details</h1>
         <form class="form-inline mb-4" action="" method="get">
             <div class="form-group">
-                <label for="studentId">Enter Student ID:</label>
+                <label for="studentId" class="text-white">Enter Student ID:</label>
                 <input type="text" class="form-control ml-2" id="id" name="id" required>
             </div>
             <button type="submit" class="btn btn-primary ml-2">Search</button>
         </form>
-        <table class="table border rounded">
+        <table class="table border">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Father's Name</th>
-                    <th>Date of Birth</th>
-                    <th>Address</th>
-                    <th>Phone</th>
-                    <th>Email</th>
-                    <th>Aadhar Number</th>
-                    <th>Course Name</th>
-                    <th>Branch Name</th>
+                    <th class="text-white">Name</th>
+                    <th class="text-white">Father's Name</th>
+                    <th class="text-white">Date of Birth</th>
+                    <th class="text-white">Address</th>
+                    <th class="text-white">Phone</th>
+                    <th class="text-white">Email</th>
+                    <th class="text-white">Aadhar Number</th>
+                    <th class="text-white">Course Name</th>
+                    <th class="text-white">Branch Name</th>
                 </tr>
             </thead>
             <tbody>
@@ -84,16 +98,16 @@ body {
                                 
 
                 %>
-                                <tr>
-                                    <td><%= name %></td>
-                                    <td><%= fatherName %></td>
-                                    <td><%= dob %></td>
-                                    <td><%= address %></td>
-                                    <td><%= phone %></td>
-                                    <td><%= email %></td>
-                                    <td><%= aadhar %></td>
-                                    <td><%= course %></td>
-                                    <td><%= branch %></td>
+                                <tr >
+                                    <td class="bg-white"><%= name %></td>
+                                    <td class="bg-white"><%= fatherName %></td>
+                                    <td class="bg-white"><%= dob %></td>
+                                    <td class="bg-white"><%= address %></td>
+                                    <td class="bg-white"><%= phone %></td>
+                                    <td class="bg-white"><%= email %></td>
+                                    <td class="bg-white"><%= aadhar %></td>
+                                    <td class="bg-white"><%= course %></td>
+                                    <td class="bg-white"><%= branch %></td>
                                 </tr>
                 <%
                             } else {
