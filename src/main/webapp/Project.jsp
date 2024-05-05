@@ -107,7 +107,7 @@
                             Leave Details
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="leaveDetailsDropdown">
-                            <li><a class="dropdown-item" href="#">Faculty Leave Details</a></li>
+                            <li><a class="dropdown-item" href="FacultyLeave.jsp">Faculty Leave Details</a></li>
                             <li><a class="dropdown-item" href="#">Student Leave Details</a></li>
                         </ul>
                     </li>
@@ -137,7 +137,7 @@
                             Fee
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="feeDropdown">
-                            <li><a class="dropdown-item" href="https://www.niet.co.in/all-fee-structure.php">Fee Structure</a></li>
+                            <li><a class="dropdown-item" href="https://www.niet.co.in/all-fee-structure.php" target="_parent">Fee Structure</a></li>
                             <li><a class="dropdown-item" href="https://feepal.org/index.php?/institute/noida-institute-of-engineering-and-technology">Pay Fee</a></li>
                         </ul>
                     </li>

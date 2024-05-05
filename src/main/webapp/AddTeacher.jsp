@@ -16,7 +16,6 @@
     function validateForm() {
         var name = document.getElementById('name').value;
         var fname = document.getElementById('fname').value;
-        var empId = document.getElementById('empId').value;
         var dob = document.getElementById('dob').value;
         var address = document.getElementById('address').value;
         var phone = document.getElementById('phone').value;
@@ -65,6 +64,13 @@
 
         // Additional validation logic
         // You can add more validations here, such as checking email format, phone number format, etc.
+        
+        // Example: Email format validation
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address");
+            return false;
+        }
 
         return true; // return true if validation passes, false otherwise
     }
